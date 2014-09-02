@@ -3,6 +3,10 @@
 Course requirements: odd year start
 ===================================
 
+The following tables assume that you take ATSC 201 in
+an odd year (2013, 2015, etc.).  **Bold** courses are offered
+only every other year.
+
 First year
 ----------
 
