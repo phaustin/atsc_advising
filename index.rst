@@ -8,22 +8,12 @@ ATSC Advising
     requirements/requirements.rst
 
 
-Advising notes for 2014
+Advising notes for 2015
 _______________________
 
-+ The undergraduate advisor for this year is Dr. Roland Stull.  Contact
+
++ The undergraduate advisor for this year is Dr. Philip.  Contact
   information:
-
-  Office: EOS-South 158
-
-  E-mail: rstull@eos.ubc.ca
-  
-  Phone: 604-822-5901
-
-  Web: http://www.eos.ubc.ca/about/faculty/R.Stull.html
-
-
-+ If Roland is unavailable contact Dr. Phil Austin
   
   Office: EOS-South 157
 
@@ -33,8 +23,20 @@ _______________________
 
   Web: http://www.cafc.ubc.ca
 
+
++ If Phil is unavailable contact Dr. Roland Stull
+  
+  Office: EOS-South 158
+
+  E-mail: rstull@eos.ubc.ca
+  
+  Phone: 604-822-5901
+
+  Web: http://www.eos.ubc.ca/about/faculty/R.Stull.html
+
+  
 + If you are planning on applying for the Environment Canada forecaster job posting
-  in November, email rstull@eos.ubc.ca to be put on a mailing list for 
+  in November, email paustin@eos.ubc.ca to be put on a mailing list for 
   preparation information.
 
 
@@ -51,11 +53,11 @@ several required courses are offered only every other year, there are two differ
 
 + If you declared your major and took ATSC 201 in an even year (2014, 2016, etc.)  then download
   use the `even year pdf template <documents/ATSC_MAJOR_JUNE_2014_even.pdf>`_  or the
-  `even year docx template <documents/ATSC_MAJOR_JUNE_2014_even.docx>`_
+  `even year docx template <documents/ATSC_MAJOR_JUNE_2015_even.docx>`_
 
 + If you declared your major and took ATSC 201 in an odd year (2013, 2015, etc.)
   then download use the `odd year pdf template <documents/ATSC_MAJOR_JUNE_2014_odd.pdf>`_  or the
-  `odd year docx template <documents/ATSC_MAJOR_JUNE_2014_odd.docx>`_
+  `odd year docx template <documents/ATSC_MAJOR_JUNE_2015_odd.docx>`_
 
 Course tables
 +++++++++++++
