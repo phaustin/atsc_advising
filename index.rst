@@ -43,6 +43,16 @@ _______________________
 Course planning information
 ___________________________
 
+Degree Navigator
+++++++++++++++++
+
+`Degree Navigator <http://science.ubc.ca/students/degree-navigator>`_
+a new tool to check whether you are on track to satisfy degree requirements for
+graduation.  The website has a couple of short videos -- if you've got
+questions email me at paustin@eos.ubc.ca
+
+
+
 Planning templates
 ++++++++++++++++++
 
