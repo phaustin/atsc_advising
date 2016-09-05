@@ -3,7 +3,7 @@
 import sphinx_bootstrap_theme
 print('do i see this')
 #
-# curric documentation build configuration file, created by
+# advising documentation build configuration file, created by
 # sphinx-quickstart on Sat Aug  8 10:48:29 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -213,7 +213,7 @@ html_sidebars = {'**': ['localtoc.html']}
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'curric'
+htmlhelp_basename = 'advising'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -235,8 +235,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'curric.tex', 'curric Documentation',
-   'curric', 'manual'),
+  (master_doc, 'advising.tex', 'advising Documentation',
+   'advising', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -265,7 +265,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'curric', 'curric Documentation',
+    (master_doc, 'advising', 'advising Documentation',
      [author], 1)
 ]
 
@@ -279,8 +279,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'curric', 'curric Documentation',
-   author, 'curric', 'One line description of project.',
+  (master_doc, 'advising', 'advising Documentation',
+   author, 'advising', 'One line description of project.',
    'Miscellaneous'),
 ]
 

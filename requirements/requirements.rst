@@ -1,5 +1,5 @@
-Course requirements for ATSC undergraduate and diploma students
-===============================================================
+Course requirements
+===================
 
 .. toctree::
     :hidden:
