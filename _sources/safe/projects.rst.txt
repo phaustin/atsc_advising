@@ -1,0 +1,270 @@
+:orphan:
+   
+ATSC 448/GEOB 448 project suggestions
+-------------------------------------
+
+Background
+++++++++++
+
+- Forty hour project, team or individual
+
+- Work with guidance from a professor and the course instructor
+
+- Post the project as a part of a web portfolio on github/amazon/etc.
+
+
+.. _platform:  
+
+A Platform for Student Projects
++++++++++++++++++++++++++++++++
+
+I would like to see student projects uploaded to a public website, as advertising for both the
+students and ATSC.  It's now trivial to make a blog using IPython notebooks -- teaching the mechanics
+of how to do this would only take 2-3 hours of class time.  Here is an example of
+what I have in mind: both in terms of tool use and presentation format:
+
+* `Nicolas Fauchereau blog entry <http://nicolasfauchereau.github.io/climatecode/posts/xray/>`_ using
+  `Github pages <https://pages.github.com/>`_ and `IPython notebooks <http://ipython.org/notebook.html>`_
+
+
+Projects
+++++++++
+
+  
+1. GCM/Reanalysis intercomparison
+---------------------------------
+
+- Question:  How well do 5 gcms do compared with reanalysis in representing
+  the vertical structure of the tropical atmosphere?
+
+- Skills:
+
+  - Read plot PCMDI model data (netCDF4, Python/R, mapping, tephigrams)
+
+  - Taylor diagrams, T-tests
+
+2. Hi-resolution model comparison to data
+-----------------------------------------
+
+- Question: How well does the xxx model do a reproducing the *** local observed phenomena.
+  xxx could be Roland's model or the HRDPS EC operational model which I am archiving some
+  fields near surface fields. *** could be sea-breeze, gap winds, mountain generated precipitation
+
+- Skills
+
+  - Read plot model data and observations (netCDF4, Python/R, mapping)
+
+  - Regional atmospheric science dynamics
+
+    
+3. 20 year soil moisture climatology/trends
+-------------------------------------------
+
+- Question: What is the regional variablity in soil moisture measured by
+  satellite microwave sensors
+
+
+4. Regional NDVI trends
+-----------------------
+
+- Question: How does plant health as measured by NDVI track precipitation
+  snowpack trends?  (lagged correlation)
+
+
+5. Collision-Coalescence
+------------------------
+
+**Numerical Modelling of Collision Coalescence Growth of Raindrops.**
+
+1) Develop a numerical model for the falling speed of spherical
+raindrops. Start off by reading whatever you can find on the web, using
+the three links below as a starting point. Make the following
+assumptions:
+
+-  The drops are spherical.
+
+-  The atmosphere is saturated.
+
+-  A quadratic drag law is adequate.
+
+It would be best to make drop radius an explicit model variable, and
+more elegant to make the model equation(s) dimensionless. Once your code
+is working, test it by comparison with known analytical solutions and
+limiting cases.
+
+2) Use the results of your model to investigate the rate of growth of
+raindrops under collision coalescence. Make and justify assumptions
+about atmospheric conditions, including drop size distribution. You
+might want to start off by using only one drop size in a monodisperse
+cloud layer.
+
+**Links.**
+
+`Fluid Physics <http://www.physics.buffalo.edu/phy410-505-2004/Chapter1/ch1-lec2.pdf>`_
+
+`Raindrops introduction <http://www.maa.org/press/periodicals/loci/joma/raindrops-introduction>`_
+
+`ODE project  <http://home2.fvcc.edu/~dhicketh/DiffEqns/Spring11projects/Ben_Lynch_Gavin_Lommatsch/DiffEqProject/DiffEqProjectGavinBen.pdf>`_
+
+
+6. Synoptic climatology of Air Quality Episodes
+-----------------------------------------------
+
+- Question: What is the connection between synoptic weather patterns and concentrations of pollutant (YY)  in XXX  British Columbia? What weather patterns produce degraded air quality and why?
+
+- Skills
+
+  - Data mining: Retrieve air quality data from Online archives (ENVISTA)
+
+  - Regional air pollution dynamics
+
+  - familiarity with R (openair package), compositing of weather maps (NOAA ESRL site), HYSPLIT
+
+    
+7. Impacts of Climate Change and Variability on Forest Fire Frequency in Pacific NW
+-----------------------------------------------------------------------------------
+
+- Question: how has the frequency of forest fires changed in our region and how will it change in the future?
+
+- Skills
+
+  - Data mining: Retrieve air quality data from Online archives (multiple fire history archives)
+
+  - Interpret Regional GCM scenarios
+
+  - Distinguish climate change from variability. Societal impacts
+
+
+8. Clean-energy Weather
+-----------------------
+
+Motivation:  How meteorologists can provide value in a world where forecasts are made by computer.
+
+Learning Goals:  By the end of this project, you will be able to:
+
+- compare the value of ensemble numerical forecasts vs deterministic forecasts
+
+- explain how ensemble forecast output can be used to make probabilistic forecasts
+
+- create scripts to postprocess raw ensemble forecasts into a calibrated probabilistic forecast
+
+- verify probabilistic forecasts against weather-station observations
+
+- apply probabilistic forecasts to (pick one):
+
+  a) precipitation forecasts into hydroelectric reservoir watersheds
+     
+  b) wind forecasts at wind farms
+      
+  c) electric load forecasts for cities
+      
+  d) ampacity forecasts for electric transmission lines
+      
+
+
+9. Forest-fire Smoke Dispersion
+-------------------------------
+   
+Motivation:  To reconcile societal need for a weather product vs. crappy data available to confirm if the product actually works.
+
+Learning Goals:  By the end of this project, you will be able to:
+
+- contrast different smoke-plume rise theories
+- program one smoke-plume rise theory into a computer
+- characterize data that has extremely large error bars
+- use the plume-rise output as input to a dispersion model
+- critique the method of using output from a chain of models to diagnose the accuracy of one of the models
+        
+
+10. Modes of climate variability
+--------------------------------
+
+Question: What are the main modes of climate variability in the seasonal to decadal time scale — what are their characteristics in terms of spatial and temporal behaviour and do they interact with each other?
+
+Skills: 
+
+-Plot time series data and determine if there are relations between various climate time series.
+
+-Learn about modes of climate variability:
+
+
+* `El Nino-Southern Oscillation (ENSO) <http://ggweather.com/enso/oni.htm>`_
+
+* `Pacific Decadal Oscillation (PDO) <http://research.jisao.washington.edu/pdo/PDO.latest>`_
+  
+*  Arctic Oscillation (AO)
+  
+*  North Atlantic Oscillation (NAO)
+  
+* `Pacific-North American pattern (PNA) <http://www.cpc.ncep.noaa.gov/products/precip/CWlink/daily_ao_index/teleconnections.shtml>`_
+
+  
+
+11. Carbon sequestration of an unmanaged set-aside field in the Fraser Delta 
+-----------------------------------------------------------------------------
+
+Set-aside areas are a ecological conservancy strategy in the Fraser
+Delta to provide habitat for migratory birds. Although the ecological
+benefits for migratory birds is well studies, is is also of interest
+to explore whether those areas promote carbon sequestration
+(i.e. whether such areas could qualify as a carbon offsetting
+strategy). To answer this question, one needs to measure long-term CO2
+exchange over such surfaces.
+
+The UBC micrometeorology group has measured (as a by-product to an
+energy balance study) carbon-dioxide (CO2) fluxes (net ecosystem
+exchange, NEE) by eddy covariance continuously over a full annual
+cycle over a set-aside grassland on Westham Island (see:
+http://ibis.geog.ubc.ca/~achristn/infrastructure/westhamisland.html). The
+student project's goal would be to properly filter, analyze and for
+the first time to present data on CO2 fluxes, and consequently
+C-sequestration over this specific grassland and estimate the annual
+NEE.
+
+Keywords: Biogeochemical cycling, carbon cycle, agricultural systems, eddy covariance
+
+Requirements: High-level programming skills, time-series analysis, statistics
+
+Supervision: Dr. A. Christen, Dr. T.A. Black, Dr. R. Jassal
+
+
+12. Aerodynamic resistances to heat and momentum transfer above an insect-attacked pine forest 
+----------------------------------------------------------------------------------------------
+
+To properly model transfer of energy, water and greenhouse gases, many
+land-surface schemes employed in weather and climate models rely on
+resistance approaches. Those schemes calculate the resistances as a
+function of wind and stability (See also
+http://ibis.geog.ubc.ca/~mpb/).
+
+A challenge in the resistance formulation is the fact that the
+resistance to the transfer of momentum can be as much as an order of
+magnitude less than for other entities, like heat and water
+vapour. This is because in addition to skin drag momentum transfer
+over rough surfaces includes form drag, due to bluff body
+effects. Form drag includes vortices and wakes which add the transfer
+of momentum by pressure perturbations. There is no parallel process
+associated with the transfer of heat or water vapour.
+
+The UBC micrometeorology and biometeorology groups have measured
+momentum and sensible heat fluxes and profiles of wind and
+temperatures over several weeks in a boreal forest, attacked by the
+Mountain Pine Beetle. The current outbreak of mountain pine beetle in
+British Columbia which began in the late 1990’s is predicted to kill
+76% of the mature pine volume in the province by this year. Although
+such epidemics have occurred in the past, none have been this large in
+areal extent or in duration. Our goal is to properly model the effects
+of the Mountain Pine Beetle on carbon, water and energy exchange. To
+perform this task we need to check whether our current handling of
+resistances is properly reflecting the nature of this attacked forest.
+
+The student's project goal would be to calculate resistances and
+parameterize the differences in resistance between heat and momentum
+for this particular insect attacked forest canopy and compare the
+formulations against the literature values.
+
+Keywords: Micrometeorology, forest meteorology, wind, eddy covariance, turbulence
+
+Requirements: High-level programming skills, time-series analysis, statistics
+
+Supervision: Dr. A. Christen and Dr. T.A. Black

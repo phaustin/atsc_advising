@@ -1,0 +1,28 @@
+.. include:: refs.txt   
+.. include:: index_notebooks.txt             
+.. default-role:: math
+
+
+.. _ecmwf:                  
+                  
+ECMWF Boundary Layer notes
+++++++++++++++++++++++++++
+
+* `2017 NWP training site <https://software.ecmwf.int/wiki/display/OPTR/NWP+Training+Material+2017>`_
+
+  * `ECMWF PBL Lecture 1`_
+
+  * `ECMWF PBL Lecture 2`_
+
+  * `ECMWF PBL Lecture 3`_    
+
+
+.. _thermo:  
+
+Thermodynamic notes
++++++++++++++++++++
+    
+* `Romps convection notes`_    
+
+* `Adrian Thompkins notes`_
+

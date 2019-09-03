@@ -1,0 +1,22 @@
+Instructor notes
+________________
+
+
+* Lecture 2:  `Total derivative and virtual temperature  <../../lec2_pa.pdf>`_
+* Lecture 3-4: `Geographic effects <../../Lectures_3_and_4.pdf>`_ 
+* Lecture 5-6: `Statistics <../../Lectures_5_and_6.pdf>`_.
+* Lecture 7:    `Thermodynamics <../../thermo.pdf>`_  
+* Lecture 7:   `Probability averages and the Reynolds conditions <../../stationarity.pdf>`_
+* Lecture 8   `Hydrostatic balance and scale heights <../../hydro.pdf>`_
+* Lecture 9:  `the Bousinesq and anelastic approximations <../../boussinesq.pdf>`_
+* Lecture 10:  `Lab tour slides <../../Lecture_10.pdf>`_
+* Lecture 11: `Mixed layer <../../mixed_2009.pdf>`_
+* Lecture 12: `Mixed layer jump equation <../../mixed_2009_jump.pdf>`_
+* Lecture 12: `Pressure perturbation term  <../../pressure_perturb.pdf>`_
+* Lecture 15:  `w* and u* velocity scales <../../velocity_scales.pdf>`_
+* Lecture 15:  `Mellor Yamada TKE <../../mellor_yamada.pdf>`_ 
+* Lecture 17: `FFT and cross correlation <../../xcorr_fft.pdf>`_
+* Lecture 17: `Time Series  <../../Lecture_17.pdf>`_
+* Lecture 18: `Time Series (continued)  <../../Lecture_18.pdf>`_
+* Lecture 19: `Scaling  <../../Lecture_19.pdf>`_.
+* Lecture 21: `Structure functions <../../strfun.pdf>`_

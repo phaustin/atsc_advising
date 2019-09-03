@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chapter 5 coding problems &#8212; A500</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b>2019JSep01</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/chap5_code.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  
+  
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="chapter-5-coding-problems">
+<span id="chap5-coding"></span><h1>Chapter 5 coding problems<a class="headerlink" href="#chapter-5-coding-problems" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Use your rootfinder to write a function that does the following:
+Given the temperture and mixing ratio at height z=0
+find the temperture as a function of height assuming
+saturated adiabatic ascent.</p>
+<p>For this exercise:</p>
+<ol class="lowerroman simple">
+<li><p>Start at z0=0, p0 = <span class="math notranslate nohighlight">\(10^5\)</span> Pa, T0=280 K</p></li>
+<li><p>Calculate an initial <span class="math notranslate nohighlight">\(h_{m0}=c_p T_0 + l_v r_{sat}(T_0, p_0 ) + g z_0\)</span>
+using <span class="math notranslate nohighlight">\(l_v = 2.5 \times 10^6\ J/kg/K\)</span> and <span class="math notranslate nohighlight">\(c_p = 1004\ J/kg/K\)</span>
+and g=9.8 <span class="math notranslate nohighlight">\(m\,s^{-2}\)</span> (eqn 38 of the <a href="#id2"><span class="problematic" id="id3">`thermodynamics notes`_</span></a>  where I
+unfortunately called the moist static energy  <span class="math notranslate nohighlight">\(s_v\)</span> instead of <span class="math notranslate nohighlight">\(h_m\)</span> )
+Use the definition on p. 5 of the <a href="#id4"><span class="problematic" id="id5">`thermodynamics notes`_</span></a> that
+<span class="math notranslate nohighlight">\(r_{sat}(T, p ) = \rho_{sat}/\rho_{d} = \epsilon e_{sat}/(p - e_{sat} )\)</span>
+where <span class="math notranslate nohighlight">\(\epsilon = R_d / R_v = 287 (J/kg/K) / 461 (J/kg/K) = 0.622\)</span></p></li>
+<li><p>Use the rootfinder to find a vector of temperatures that
+satisfies  <span class="math notranslate nohighlight">\(h_m = h_{m0}\)</span> for a hydrostatic
+atmosphere where the pressure decreases according to <span class="math notranslate nohighlight">\(dp = - \rho g dz\)</span>
+given a vector of heights from z=0 to z=3000 m in 10 m increments, with
+<span class="math notranslate nohighlight">\(\rho = p/(R_d T)\)</span> and <span class="math notranslate nohighlight">\(R_d\)</span> = 287 J/kg/K</p></li>
+</ol>
+</li>
+<li><p>Use this function to calculate T,z,rv,and p for a saturated hydrostatic
+atmosphere and show that <span class="math notranslate nohighlight">\(\theta_e\)</span> is approximately
+constant.</p></li>
+<li><p>Hand in:</p>
+<blockquote>
+<div><p>Hand in a script that prints out the (approximately constant) vector of
+<span class="math notranslate nohighlight">\(\theta_e\)</span> values, where
+<span class="math notranslate nohighlight">\(\theta_e = \theta \exp \left ( \frac{l_v r_{sat}}{c_p T} \right )\)</span>
+(eqn 53 of the <a href="#id6"><span class="problematic" id="id7">`thermodynamics notes`_</span></a> )</p>
+</div></blockquote>
+</li>
+<li><p>Find <span class="math notranslate nohighlight">\(R_f\)</span> (810 m), <span class="math notranslate nohighlight">\(u_*\)</span>, <span class="math notranslate nohighlight">\(w_*\)</span> (both at 30 m), <span class="math notranslate nohighlight">\(\Phi_M\)</span> and
+<span class="math notranslate nohighlight">\(\Phi_H\)</span> (both at 810 m) for our LES data ( <a class="reference external" href="http://clouds.eos.ubc.ca/~phil/courses/atsc500/code/python/BOMEX_256x256x150_25m_20m_2s_16_0000009240.nc">Bomex data</a> ).  For the vertical gradients
+in the mean U and V winds just do a simple vertical difference between 810 and 790 m.</p>
+<p>Hand in a script that calculates and prints each of the values.  For your reference:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_f\)</span> : Stull 5.6.1a</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_*\)</span> : Stull 2.10b</p></li>
+<li><p><span class="math notranslate nohighlight">\(w_*\)</span> : Stull 4.2a</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Phi_H\)</span> and <span class="math notranslate nohighlight">\(\Phi_M\)</span> : Stull 5.8a</p></li>
+</ul>
+</li>
+</ol>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, phaustin.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

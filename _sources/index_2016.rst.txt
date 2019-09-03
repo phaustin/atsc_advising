@@ -1,0 +1,741 @@
+.. phil's project documentation master file, created by
+   sphinx-quickstart on Tue Mar 10 17:12:52 2009.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+.. include:: refs.txt   
+   
+Course materials
+________________
+
+.. toctree::
+   :maxdepth: 2
+
+   Python <python>
+              
+   Syllabus <syllabus>
+
+   Notebooks <notebooks>
+   
+Class notes
+-----------
+   
+Friday, Sep. 11  -- lec 1
++++++++++++++++++++++++++
+
+- coverage: start Stull chapter 1 (all)
+
+- learning objectives: 1) identify and explain the origin of the mean
+  structure in a typical boundary layer during its diurnal cycle.
+  2) use Taylor series expansions of conservation laws to link the
+  Eulerian and Lagrangian frames of reference  3) use Taylor series
+  expansions of the equation of state for moist air to develop a simple
+  expression for parcel buoyancy 
+
+- End of chapter questions: 1, 2, 5,  and 11
+  
+- Animations of large eddy simulations
+
+  - `Dry convective boundary layer potential temperature <animations/theta.avi>`_
+  
+  - `Tropical boundary layer cloud with precipitation <animations/cgils_ctl_s6.avi>`_
+  
+- take home points
+
+  - boundary layer has structure 
+
+  - understanding/predicting the structure is crucial for understanding
+k    transport of energy, momentum, tracers and cloud properties
+
+  - models, observations and laboratory experiments can
+    each provide different information about the steady-state
+    and time dependent behaviour of the boundary layer
+
+- `Notes on Taylor series and Lagrangian and Eulerian derivatives <docs/lec1_indepth.pdf>`_
+
+- Big picture: *Conservation laws* for mass, momentum,
+  energy and entropy are formulated in a Lagrangian frame
+  of reference, using the *total* (or material) derivitive.  Problem:
+  very difficult to model or measure in a reference frame moving with
+  a tagged set of particles.
+
+- My notes on `Taylor series and material derivatives <docs/lec1_indepth.pdf>`_
+
+- Important equation:
+
+  .. math::
+
+     \frac{d \zeta}{dt} = 
+     \frac{\partial \zeta}{\partial t} +
+     u \frac{\partial \zeta}{\partial x}  + 
+     v \frac{\partial \zeta}{\partial y} +
+     w \frac{\partial \zeta}{\partial y} =
+     \frac{\partial \zeta}{\partial t} +
+     \mathbf{v} \cdot \nabla \zeta
+
+ 
+
+- For next time:
+
+  - Read Stull pp. 29-47
+
+  - Come prepared to discuss problems 5, 6, 7 and 8
+
+  - Download and run the `Python Crash Course <http://nbviewer.ipython.org/github/barbagroup/CFDPython/blob/master/lessons/00_Quick_Python_Intro.ipynb>`_
+    notebook
+    
+  - Skim http://clouds.eos.ubc.ca/~phil/djpine_python to see what parts of Python are covered
+    
+Monday, Sep. 14  -- lec 2
++++++++++++++++++++++++++
+
+- learning objectives:
+  
+  1) Distinguish between ensemble, volume, and time averaging -- in particular,
+     be able to translate each type of average into code and know their
+     benefits/drawbacks
+
+     * My notes on averaging:  `stationarity.pdf <docs/stationarity.pdf>`_
+
+  2) show the relationship between classical
+     thermodynamics variables (u, h, s) and their dry atmospheric
+     counterparts (:math:`h_d`, :math:`\theta`)
+
+     * My notes on thermodynamics   `thermo.pdf <docs/thermo.pdf>`_
+
+  3) Python exercises for Wednesday:
+
+     i)   Download `lec2.ipynb <https://github.com/phaustin/atsc500/blob/master/notebooks/lec2.ipynb>`_ from github
+
+     ii)  Read large eddy simulation output and calculate the
+          kinematic heat flux in new cells at the bottom of the notebook.  Upload to the cloud
+          and send me the url
+
+     ii)  Setup `vapor <https://www.vapor.ucar.edu/docs/usage/getting-started-vapor>`_
+          on your laptop and do a direct volume rendering of a single model
+          timestep
+      
+  
+Questions::
+
+   As I read Stull Ch2 and did the exercises, these are the questions
+   that came to mind:
+
+   1) Regarding partial derivatives of mean turbulence vectors (problem 5
+   c,d,e) - since, due to Reynolds averaging, we can assume that the
+   mean of the turbulence component for a given vector is zero, does
+   this also mean that the derivative of that component is also zero?
+
+   2) Regarding kinematic heat flux (problem 8) - From the standpoint of
+   dimensional analysis, I can follow how the author derives the units
+   for kinematic heat flux to be K*m/s, but I am not sure I am clear
+   what these units mean in a physical sense.  It appears in the
+   exercise that to arrive at an answer that makes sense, one must
+   find the net kinematic heat flux, integrate over the time period,
+   and divide by the thickness of the layer - but I am not sure why
+   this should be divided by the thickness of the layer.  Is it that
+   the heat flux as defined is like the energy flow integrated over
+   the surface area of the layer that is perpendicular to the flow,
+   and therefore the thickness is akin to the volume of air that is
+   being heated?  So if the same amount of flux were applied to a
+   layer 1m thick, it would be 10 times less stuff to heat, and
+   therefore would heat up 100 times more? ...  you know, I think I
+   just answered my own question!
+  
+Thursday, Sep. 17  -- lec 3
++++++++++++++++++++++++++++
+
+- learning objectives
+
+  1) Understand how to use Taylor Series expansions and Reynolds decomposition
+     to decompose functions and data into a mean and a perturbation
+
+     In depth: `Taylor Series and Reynolds decomposition <docs/taylor_series.pdf>`_ 
+
+  2) Start using python for LES analysis in
+     `lec3.ipynb <https://github.com/phaustin/atsc500/blob/master/notebooks/lec3.ipynb>`
+
+  3) For Monday -- download 10 member ensemble and do exercise at end of lec3.ipynb
+     Also, do chapter 2 problem 8 and finish reading Chapter 2
+
+- I've pushed a new version of the lec3.ipynb notebook to github.  It fixes the
+  calculation of the mean vertical theta profile.  You can fetch the new version
+  by doing::
+
+    git pull
+
+  in your numeric directory, or by copying it from github as a raw file.  An html
+  version is `here <http://clouds.eos.ubc.ca/~phil/courses/atsc500/html_files/lec3.html>`_
+
+  
+Monday, Sep. 21  -- lec 4
++++++++++++++++++++++++++
+
+- learning objectives: begin derivation of the governing equations
+
+  *  Look at solutions for Day 3 problems (lec4.ipynb)
+
+  * Begin discussion of Stull Chapter 3: Governing equations
+
+    - Go over Taylor and Reynold's decomposition of (3.3.1a) and `Taylor's series notes`_
+
+    - Look at `Hydrostatic balance notes`_ and definition of density scale height and
+       relate it to the Stull p. 81 discussion
+
+
+- For Thursday:
+
+  - Hand in a notebook that:
+
+    1.  Plots the vertical profile of the ensemble-averaged sensible heat (enthalpy) flux for
+        bottom 1km of the dryles simulation
+
+    2.  plots the vertical profile of the total perturbation kinetic energy (Stull 2.5c)
+
+  - Read Stull chapter 3 up to page 92.
+
+    - It might be helpful to combine this with `KC chapter 4`_
+
+  - Read the first three pages of my `Boussinesq and Anelastic notes`_ based on `Dave Randall's notes`_
+
+  - Not required but if you're interested, take a look at the governing equations of the LES in
+    the `Khairoutdinov and Randall, 2003 Appendix`_
+    
+
+Thursday, Sep. 24  -- lec 5
++++++++++++++++++++++++++++
+
+
+- learning objectives: continue with scaling and governing equations
+
+  - off topic:  `Corner cases <http://www.philly.com/philly/news/20150918_Is_Darth_Vader_using__the_force__to_turn_Philly_voters_into_Adarians_.html>`_
+    and `Python PEPs <https://www.python.org/dev/peps/pep-0495/>`_
+  
+  - go to over the `day 4 problem solution <html_files/lec4_answer.html>`_
+
+  - work through this `notebook on the density and pressure scale heights <html_files/lec5_hydrostat.html>`_
+    which solves the equations in `Hydrostatic balance notes`_ for standard atmospheres.
+
+  - On the board:
+
+    - Use `Taylor's series notes`_ to expand :math:`theta` in terms of temperature and pressure perturbation
+
+    - Use `thermodynamics notes`_  to derive liquid water static energy and the temperature dependence of the enthalpy of evaporation
+
+- For Monday:
+
+  - Do Stull Chapter 2 problem 5 and problem 9
+
+  - Use a Taylor series expansion of :math:`\ln \theta` in terms of :math:`\theta` and show that:
+
+    .. math::
+
+       \frac{\theta_2  - \theta_1}{\theta_1}  \approx \ln \theta_2  - \ln \theta_1
+
+    Include an estimate of the relative error -- i.e. what is the  form of the neglected second order term
+    in the Taylor series and how big is it for :math:`\theta_2` = 301 K, :math:`\theta_1` = 300 K
+    
+
+Monday Sep 28  -- lec 6
++++++++++++++++++++++++
+
+- learning objectives:
+
+  - go over the `Day 6 notebook on exploratory data analysis <html_files/lec6_latent.html>`_ looking at the
+    sensible and latent heat fluxes
+
+  - Review the `Boussinesq and Anelastic notes`_  pages 2-3 on the height-dependent base state.
+
+- For next time:
+
+  - Edit the `Day 6 notebook <html_files/lec6_latent.html>`_ to
+    do the same analysis for the 200 meter level below cloud base and comment
+    on differences in the distribution of perturbations and fluxes
+
+  - Add a vertical profile of cloud fraction with height up to z=3km
+    Hint (make an logical True/False array for cloud not cloud and use np.sum along axis=2 and
+    axis=1 to get a pixel count of cloud cells with height)
+
+  - Read `Randall note on dimensional analysis`_ in preparation for the rest of the  
+    `Boussinesq and Anelastic notes`_
+    
+Thursday Oct 1  -- lec 7
+++++++++++++++++++++++++
+
+- learning objectives:
+
+  - Go over Stull Chapter 2 problems 5 and 9 and my theta problem
+
+  - Review notebooks for the tropical boundary layer 200 meter analysis
+
+  - Review my `thermodynamics notes`_ on theta and entrophy, and explain why
+    there is a Nike swoosh at cloud level in the tropical simulation
+
+  - Start `Randall note on dimensional analysis`_
+
+ - for Monday -- Read Stull Chapter 4 and do problems 1, 3, 5
+
+Monday Oct 5 -- lec 8
++++++++++++++++++++++
+
+
+- learning objectives
+  
+
+- Python demo in the `Day 8 xray notebook <html_files/lec8_xray.html>`_
+
+  - use `dask and xray <http://eng.climate.com/2015/06/11/xray-dask-out-of-core-labeled-arrays-in-python/>`_
+    to organize the 10 ensembles for the dry les
+
+  - get the ensemble average and the kinematic turbulent flux :math:`\langle ^\prime T^\prime \rangle`
+    and visualize using vapor
+
+- For next time -- construct a notebook that 
+
+  - uses our 10 ensembles to produce a vapor visualization for a variance  i.e. :math:`\theta^{\prime 2}`
+
+  - embeds a block of dimension x,y,z= 110, 80, 200 with a value of 100 inside a x,y,z field of 192,128,312
+    to test the ability of the vapor wavelet transform to represent sharp angles in 3D
+
+  - Read the rest of Chapter 4 along with my `2 pager on the pressure perturbation <docs/pressure_perturb.pdf>`_
+    
+
+Thursday Oct 8 -- lec 9
++++++++++++++++++++++++
+
+- Go over my `Boussinesq and Anelastic notes`_
+
+- No class Monday
+
+- For Thursday
+
+1) derive equation 42 in  the `Boussinesq and Anelastic notes`_
+
+   .. math::
+      :nowrap:
+      :label: taylor2
+
+      \begin{multline}
+         - \frac{1 }{\rho_0} \frac{ \partial p }{\partial z}  - g \left ( \frac{ \rho}{\rho_0} \right )
+      \approx -\frac{\partial  }{ \partial z} \left ( \frac{ p}{\rho_0} \right )
+      + \frac{p }{\rho_0}  \frac{ \partial }{\partial z} 
+      \left ( \ln \theta_0 - \frac{1}{\gamma} \ln p_0 \right )
+      + g \left ( \frac{ \theta}{\theta_0} - \frac{ 1}{\gamma} \frac{p }{p_0} \right ) \\
+      = \underbrace{-\frac{\partial  }{ \partial z} \left ( \frac{ p}{\rho_0} \right )}_I
+      + \underbrace{\frac{p }{\rho_0}  \frac{ \partial }{\partial z} 
+      \left ( \ln \theta_0  \right )}_{II}
+      + \underbrace{g \left ( \frac{ \theta}{\theta_0} \right ) }_{III}
+      \end{multline}
+   
+   using the approach suggested (i.e. first derive (40) and (41) then insert
+   into (38)).
+
+   *Hint:  to get from (40) to (41)  I wrote terms like* 
+   :math:`\ln \theta_T`  as :math:`\ln \frac{\theta_0 (1 + \theta/\theta_0)}{\theta_0}`
+   *and used the Taylor series expansion for* :math:`\ln(1 + x)` where
+   :math:`x \ll 1`, (*which is an extremely handy trick.*)
+
+2) Read Chapter 5 through page 161 and calculate the profiles of Figures 5.9, 5.10 and 5.12
+   for the tropical simulation in a notebook
+   
+   
+Thursday Oct 15 -- lec 10
++++++++++++++++++++++++++
+
+1) Go over my `velocity scale notes <docs/velocity_scales.pdf>`_
+
+2) For Monday read the rest of Chapter 5 and do Stull problems 1, 3 13, 17
+
+Monday Oct 19 -- lec 11
++++++++++++++++++++++++
+
+Coverage: Stull Chapter 5 pp. 162--end
+
+Topics:  Richardson number, Obukhov length, dimensionless gradients
+
+1) Derive the critical gradient Richardson number following `Bussinger <docs/bussinger_critical_ri.pdf>`_
+
+   - compare with `Miles, 1961 <docs/miles_1961.pdf>`_
+
+2) Finish Chapter 5 and the first part of the `Bussinger-Dyer notes <docs/businger_dyer.pdf>`_
+
+   - `Dyer 1974 review article <docs/Dyer-1974.pdf>`_
+
+3) For Thursday read Chapter 6 through section 6.5 and do problems 6.14, 6.15, 6.16, 6.17
+
+4) Observational data for projects -- `Cabauw tower <https://en.wikipedia.org/wiki/KNMI-mast_Cabauw>`_
+
+   - `CESAR <http://www.cesar-database.nl/Introduction.do>`_
+
+   - `LES/Cabauw comparison <http://journals.ametsoc.org/doi/full/10.1175/MWR-D-14-00293.1>`_
+
+     
+Thursday Oct 22 -- lec 12
++++++++++++++++++++++++++
+
+Surface similarity relations
+============================
+
+Coverage: Stull Chapter 7 on Monin-Obukhov similarity pp. 263-269
+
+* Also covered in `Fleagle and Bussinger, 1980, pp. 272-283 <docs/fleagle_bussinger_1980.pdf>`_  and my `surface layer similarity`_ notes
+
+* `Bussinger history essay <http://ezproxy.library.ubc.ca/login?url=http://link.springer.com/10.1007/BF00119880>`_
+
+* My notebook on github is `bussinger_dyer.ipynb`_
+
+Cabauw tower data
+=================
+
+* `CESAR data overview by Verkaik and Holtslag, 2007  <http://ezproxy.library.ubc.ca/login?url=http://link.springer.com/10.1007/s10546-006-9121-1>`_
+
+* `CESAR login <http://www.cesar-database.nl/ShowMyCds.x>`_
+
+* My notebook on github is read_cabauw.ipynb
+
+Assignment for Monday:
+
+* Get an account on CESAR and download tower and surface data for a month of your choice
+
+*  Using my read_cabauw.ipynb add a plot of the Obukhov length L
+   for the month
+
+* Plot of Fleagle and Businger U profiles 6.53 and 6.57 vs. the tower profile of windspeed F for 3
+  different 1 hour averages using the functions in my bussinger_dyer notebook
+
+Monday, Oct. 26 lec 13
+++++++++++++++++++++++
+  
+* Go over Figure 5 of `Verkaik and Holtslag, 2007  <http://ezproxy.library.ubc.ca/login?url=http://link.springer.com/10.1007/s10546-006-9121-1>`_   
+  (local vs. surface layer scaling)
+
+* Walk through my changes to read_cabauw.ipynb and my new profile fitting code in dofit.ipynb
+
+* For Thursday:  Finish reading Chapter 7.  Hand in a notebook that fits your three hourly averaged U profiles and
+  compares the lhs and rhs  Verkaik and Holtslag equation (1).  If you have time, do the same thing
+  for the :math:`\theta` profile. for the same hours.
+
+Friday, Oct. 29 lec 14
+++++++++++++++++++++++
+
+* Go over Cabauw velocity fit of Verkaik et al.
+
+* Start on Stull Chapter 8 on FFTs and filtering:
+
+  * `fftnotebook.pdf <pdf_files/fftnotebook.pdf>`_
+
+  * `fftnotebook.html <html_files/fftnotebook.html>`_  
+
+* For Monday
+
+  * finish up the do_fit notebooks and upload your tower data files to dropbox
+
+  * Read Stull 8.3-8.6 and try getting the power spectrum and 0.5 Hz filtered values for the temperature perturbation
+    and kinematic heat flux for the Miami tower data (don't need to hand in)
+
+Monday, Nov. 2 lec 15
++++++++++++++++++++++
+
+Inertial subrange
+=================
+
+* FFT of the temperature and the heat flux
+
+  - A new version of `fftnotebook.ipynb <html_files/fftnotebook.html>`_  shows aliasing in
+    the temperature (and therefore heatflux) measurement.
+
+* Two dimensional fft
+
+  - The new notebook `fft_2d.ipynb <html_files/fft_2d.html>`_ shows how to calculate a 2D power spectrum and
+    average it over one of the dimensions using data from `Lewis et al. (2004) <http://onlinelibrary.wiley.com/doi/10.1029/2003JD003742/full>`_
+    Question:  why is -5/3 scaling showing up for the optical depth in this satellite scene?
+
+* My notes on `cross correlation and the Wiener-Khichine theorem <pdf_files/xcorr_fft.pdf>`_
+
+  - An IPython notebook `xcorr_fft.ipynb <html_files/xcorr_fft.html>`_ demonstrating the two approaches for aircraft turbulence data and showing the correlation
+    time scale for this dataset is about 2 seconds (flying at 100 m/s)
+
+    
+* Why is the -5/3 law so ubiquitous?
+
+  - Go over Stull Section 9.9.1 and `McBean and Elliot (1975) <http://ezproxy.library.ubc.ca/login?url=http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281975%29032%3C0753%3ATVTOKE%3E2.0.CO%3B2>`_ on scaling the Fourier-transformed kinetic energy equation.
+
+  - `Tritton, Physical Fluid Dynamics Chapter 20 <pdf_files/Tritton_on_Kolmogorov_Scaling.pdf>`_  has a good discussion of the assumptions made in Kolmogorov (1941)
+
+
+Assignment for Thursday 5pm
+===========================
+
+Hand in a notebook in which you:
+
+#. Show that the Wiener-Khichine theorem holds for the 2D variance spectrum for Landsat A17.  That is
+   show that integrating the power spectrum over :math:`k_x` and :math:`k_y` yields the variance of the optical depth.
+
+#. Lowpass filter the Landsat scene so that fluctuations with spatial scales less than 1 km are removed from the image.
+   (make plots of the filtered image and its 1-d power spectrum)
+
+#. Use the approach of McBean and Elliot equation (7) to find the viscous dissipation rate :math:`\epsilon` for the Miami vertical velocity timeseries.
+   (i.e. fit a straight line to the inertial subrange on a log/log plot).
+
+   
+Reading for Friday
+==================
+
+* Read `Chris Bretherton's lecture 8 <http://www.atmos.washington.edu/academics/classes/2013Q2/547/lect8.pdf>`_ on K-theory parameterizations.
+
+* Run and understand the `mixed_layer.py multilevel model`_
+  
+   
+Friday, Nov.6, lec 16
++++++++++++++++++++++
+
+* Go over  `fft_dissipation.ipynb <html_files/fft_dissipation.html>`_
+
+* Go over  `fft_2d-filter.ipynb <html_files/fft_2d-filter.html>`_
+
+* Work through mixed layer model
+
+* For Monday, read:  Stull page 209 (various K params), Stull page 450-459 (mixed layer),
+  my `liebniz notes <pdf_files/liebniz.pdf>`_, my `mixed layer notes`_
+  and my `entrainment notes <pdf_files/mixed_jump.pdf>`_
+
+Monday, Nov. 9, lec 17
+++++++++++++++++++++++
+
+* revisit `the 2d filter <html_files/fft_2d-filter.html>`_ using fftshift and ifftshift
+
+* Look at an eight hour time series of a `dry les run <html_files/dry_les.html>`_
+
+* Go over `inertial subrange slides <pdf_files/09-kolm.pdf>`_
+
+* Introduce `the boundary layer parameterization for CCCma AGCM4 <http://ezproxy.library.ubc.ca/login?url=http://www.tandfonline.com/doi/abs/10.1080/07055900.2012.755610>`_
+
+*  For Thursday notebook hand-in:
+
+   1) Modify `the mixed_layer.py code <http://clouds.eos.ubc.ca/~phil/docs/a500private/mixed_layer.py>`_ to solve equations 11-13 in my  `mixed layer notes`_
+
+   2) modify `the dry les run notebook <html_files/dry_les.html>`_ to plot the buoyancy flux instead of :math:`\theta`.  Find the height of the base of the
+      entrainment layer (where the flux goes to zero) and verify that it is growing as :math:`\sqrt{time}`.  If you have time, compare your time series
+      to the growth predicted in 1)
+
+* For Friday -- read the rest of  Stull chapter 11
+  
+Friday, Nov. 13, lec 18
++++++++++++++++++++++++
+
+* Python next level: go over `convert_notebooks.py <https://github.com/phaustin/atsc500/blob/util/a500_code/a500_utils/convert_notebooks.py>`_
+  and `setup.py <https://github.com/phaustin/atsc500/blob/master/a500_code/setup.py>`_ on designing, installing and running python
+  packages and scripts
+
+* Go over `Garrat on mixed layers <pdf_files/garratt_ch6.pdf>`_   -- sqrt(time) growth and encroachment vs. entrainment (p. 155)
+
+* My `mixed layer notebook`_
+
+* My `flux profile notebook <html_files/flux_profiles.html>`_
+
+For Monday
+==========  
+
+* use the LES inversion heights and Garratt (6.18) to test whether :math:`\beta` = 0.2
+
+
+Monday, Nov. 16, lec 19
++++++++++++++++++++++++
+
+
+Cloud topped boundary layer
+===========================
+
+* My :math:`\beta` estimate given in the `spline profiles notebook <html_files/spline_profiles.html>`_
+
+* Follow `Garrat Chapter 7 <pdf_files/garratt_ch7.pdf>`_
+
+  - Also  `Bretherton lecture 15 <http://www.atmos.washington.edu/academics/classes/2013Q2/547/lect15.pdf>`_ and
+          `Bretherton lecture 16 <http://www.atmos.washington.edu/academics/classes/2013Q2/547/lect16.pdf>`_
+
+  - Summarized by these two lectures by Stephan de Roode given at the `Euclipse summer school <pdf_files/http://www.euclipse.eu/summerschool/Lectures.html>`_
+    `de Roode lecture 1`_ and `de Roode lecture 2`_
+
+
+For Friday
+==========
+
+
+
+* Download these cloud physics notes by `Stephan de Roode <pdf_files/de_roode_clouds.pdf>`_
+
+  Read Chapter 5. pp. 47-60
+  
+  - Starting with the definition of :math:`T_v` (Stull equation 1.5.1a) derive equation 5.15 (p. 51) assuming constant pressure.
+
+  - Use equations 5.18,  5.29 and 5.30 to evaluate :math:`A_d`, :math:`B_d`, :math:`A_w` and :math:`B_w` at a pressure of 900 hPa, temperature of
+    280 K, :math:`q_s` = 7 g/kg, :math:`L_v` = :math:`2.485 \times 10^{6}` J/kg, :math:`R_v` = 461.5 J/kg/K, :math:`q_v` = :math:`q_s`.
+
+  - Hand in either a notebook or paper copy by beginning of class on Friday
+
+
+Friday, Nov. 20, lec 20
++++++++++++++++++++++++
+
+* Run the `thermo_calcs notebook <html_files/thermo_calcs.html>`_
+
+* Discuss
+
+  - `de Roode lecture 2`_
+
+  - the `Melchior thesis`_
+
+  - `Gesso et al. 2014`_ 
+
+
+For Monday
+==========  
+
+
+* Modify the `mixed layer notebook`_ to set up a dry version of the case described in the `Melchior thesis`_ Figure 2.1 p. 15 (eq. 2.33) and p. 24 :
+
+  1) Use a bulk flux boundary condition like Stull 7.4a:
+
+     :math:`F_0 = |U|C_D (\theta_{0} - \hat{\theta})`  where :math:`\theta_0` is the fixed surface temperature (290 K), :math:`\hat{\theta}` is
+     the mixed layer potential temperature, :math:`|U|` is the mean surface windspeed (7 m/s) and :math:`C_D` is a drag coefficient (0.001).
+
+  2) Keep the simple entrainment relationship (:math:`w_e \Delta \theta = - kF_0` with k=0.2 )  but diagnose :math:`\Delta \theta` instead of
+     predicting it:  i.e.  :math:`\Delta \theta = \theta_{ft}  - \hat{\theta}` where the free troposphere value :math:`\theta_{ft}` is
+     given by :math:`\theta_{ft} = 292 + \Gamma h`, where :math:`\Gamma = 6\ K/km`.  Change the inversion height equation to Stull 11.2.3b:
+
+     .. math::
+
+        \frac{dh}{dt} = w_e + w_h
+
+  3) Add large scale subsidence  :math:`w_h = -Dh`  where the divergence D is :math:`5 \times 10^{-6}\ s^{-s}`
+
+
+  4) Run this case to equilibrium with radiative cooling of :math:`dF_L = 0` and :math:`dF_L = 70\ W\,m^{-2}` (see `Melchior thesis`_ 2.33) and
+     print/plot your equilibrium profile
+
+
+Monday, Nov. 23, lec 21
++++++++++++++++++++++++
+
+* My notebook `diagnose_jump.ipynb <html_files/diagnose_jump.html>`_  removes the prognostic equation for
+  the inversion :math:`\Delta \theta` and replaces it with the diagnosed temperature difference between
+  the mixed layer and the free troposphere
+
+* My notebook `interactive_sfcflux.ipynb <html_files/interactive_sfcflux.html>`_  changes the fixed
+  surface flux for a simple bulk flux parameterization with a constant drag coefficient and adds subsidence.
+
+* My notebook `interactive_vaporflux.ipynb <html_files/interactive_vaporflux.html>`_ adds an equation for
+  the water vapor budget and calculates and plots cloud thickness and the surface and inversion fluxes of
+  theta and qv
+
+  
+For Thursday
+============  
+
+* Use your relationships for :math:`A_w` , :math:`B_w` , :math:`A_d` , :math:`B_d` to convert the :math:`\theta_l` and :math:`q_v` flux profiles
+  into a buoyancy flux profile like that of Garratt Chapter 7, Figure 7.15 on page 218 (see also Bretherton Lecture 15, eqn 15.30).
+
+* Write an analytic expression to integrate your buoyancy flux profile and produce an estimate of the convective velocity scale :math:`w_*`
+  (Bretherton lecture 15, eqn. 15.19)
+
+* add this as a function to the interactive_vaporflux notebook and plot a timeseries of :math:`w_*` as a new column in the results dataframe.
+
+* describe (but don't need to implement) a function that calculates the height as a function of pressure in a mixed layer,
+  given the surface pressure, :math:`theta_l`, and :math:`q_T` profiles.  You can call any of the functions demonstrated in the thermo_calcs.ipynb notebook.
+  
+
+Thursday, Nov. 26 lec 22
+++++++++++++++++++++++++
+
+* Go over estimating  :math:`w_*`  from the buoyancy flux profile.
+
+* Review simple entrainment parameterization of `de Roode lecture 2`_  slides 8-9, based on
+  `Moeng 2000 <http://ezproxy.library.ubc.ca/login?url=http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%282000%29057%3C3627%3AERCFAL%3E2.0.CO%3B2>`_  eq. 9
+  (see also `Melchior thesis`_ eq. 2.45 on p. 18)
+
+* Look at the Nicholls-Turton parameterization as described by `Melchior thesis`_ eq. 2.51 and `Stevens, 2002`_ p. 2672 and tested by
+  `Caldewell and Bretherton, 2005`_
+
+For Monday
+==========
+
+-  Add the simple entrainment parameterization of  `de Roode lecture 2`_ slide 8 to the mixed layer model and confirm that it reproduces
+   an equilibrium in agreement with slide 9
+
+Monday, Nov. 30 lec 23
+++++++++++++++++++++++
+
+* My notebook `radiative_entrain.ipynb <html_files/radiative_entrain.html>`_
+
+
+Friday, Dec. 4 
+++++++++++++++
+
+* My Nicholls Turton notebook `nicholls_turton.ipynb <html_files/nicholls_turton.html>`_
+
+
+For projects
+============
+
+Wes::
+
+  1) install ncview
+
+     apt-get install ncview
+
+  scp -r weskeet@pip.eos.ubc.ca:/pip_raid/weskeet/transfer .
+
+
+Maggie::
+
+  Run the Bolville-Holtslag parameterization at constant surface flux into a stable overlying atmosphere
+
+  Run the Bolville-Holtslag parameterization through a diurnal cycle by making the surface flux go positive/negative
+  
+  
+Bryan::
+
+  Run the MO similarity fluxes through a diurnal cycle by prescribing the surface temperature  (fixed wind speed)
+
+  Add Maggie's K parameterization to get a unified model
+
+Tim::
+
+  Turn the Nicholls-Turton parameterization into a function
+
+  Add the sensitivity to radiation of Gesso Figure 3
+
+  Reproduce all or part of  Gesso Figure 5
+
+    
+Project ideas
++++++++++++++
+
+* Modify the original mixed_layer.py to use the Mellor-Yamada closure
+
+  - `my Mellor Yamada notes <pdf_files/mellor_yamada.pdf>`_
+
+* Modify the original  mixed_layer.py to use the Holtslag and Bollvile closure
+
+  - `Bretherton lec. 9 <http://www.atmos.washington.edu/academics/classes/2013Q2/547/lect9.pdf>`_
+
+  - `Holtslag and Bolville (1993) <http://ezproxy.library.ubc.ca/login?url=http://journals.ametsoc.org/doi/abs/10.1175/1520-0442%281993%29006%3C1825%3ALVNBLD%3E2.0.CO%3B2>`_
+
+* Modify the original mixed_layer.py to use the Canadian AGCM closure (and coarsen the vertical resolution)
+
+  - `von Salzen et al. 2014 <http://ezproxy.library.ubc.ca/login?url=http://www.tandfonline.com/doi/abs/10.1080/07055900.2012.755610>`_
+
+* Modify the zero-dim mixed layer model to handle cloud entrainment.
+
+  - `Nicholls and Turton 1986 <pdf_files/nicholls_turton.pdf>`_
+
+  - `Gesso et al. 2014`_ 
+  
+* Analyze tracer transport in the LES using top-down/bottom-up diffusion
+
+  - Garratt p. 160 and `Holtslag and Moeng (1991) <http://ezproxy.library.ubc.ca/login?url=http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281991%29048%3C1690%3AEDACTI%3E2.0.CO%3B2>`_
+
+
+
+  
+  

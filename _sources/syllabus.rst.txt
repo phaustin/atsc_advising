@@ -1,0 +1,97 @@
+.. include:: refs.txt   
+
+ATSC 500 - Boundary Layer Meteorology (3 credits)
+=================================================
+
+
+ATSC 500 - Boundary Layer Meteorology (3 credits) Fall 2019
+
+
+**Instructor**: Prof. Phil Austin. paustin@eos.ubc.ca, Room 157
+EOS Main
+
+**Objectives**: To provide an understanding of the bottom two
+kilometers of the atmosphere, a turbulent region known as the
+atmospheric boundary layer.
+
+**Text**: *Required*: `Stull BLM`_ : Stull, R.B., 1988:
+*An Introduction to Boundary Layer Meteorology*. Kluwer
+
+Academic Pub. (paperback). 666 pp. [abbreviation = BLM]
+
+*Optional*: `Stull Practical`_ , R.B. Stull 2017:
+*Meteorology for Scientists and Engineers*, 3rd edition
+
+
+*Option*: Garratt, J. R., 1992: The atmospheric boundary layer.
+Cambridge University Press, 316 pp. [abbreviation=ABL]
+
+
+Assignments and Projects
+------------------------
+
+* We will be using python on the departmental high performance cluster (and your laptops) extensively.  No need to be an expert python programmer, but you will need some experience writing programs.  I'll have details/examples at our first meeting.
+
+* The project will hopefully relate directly to research questions you'd like to answer.
+  
+
+
+Subjects by week
+________________
+
+
+#. [1,2] **Mean boundary layer characteristics** (BLM chapt 1; MSE p65-77,
+   132-135)
+   definition, structure, evolution, turbulence, micrometeorology,
+   impact.  Virtual potential temperature and frozen turbulence.
+
+#. [3,4] **Statistical tools including Reynold's averaging** (BLM chapt 2;
+   MSE p78-89)
+   turbulence spectrum, kinematic fluxes, summation notation, friction
+   velocity
+
+#. [5,6] **Governing equations for turbulent flow** (BLM chapt 3, except
+   3.6)   derivation, simplifications, scaling
+
+#. [7,8] **Turbulent variances** (BLM chapt 4, except section 4.4.1 thru
+   4.4.4) perturbation equations, Deardorff convective scaling, variance
+   equations.  Lecture 10 (Friday Oct. 9) is lab tour
+
+#. [9,10] **Turbulence kinetic energy** (BLM chapt 5; MSE Chapt 6)
+   TKE budget, stability, Richardson number, Obukhov length, scaling
+
+#. [11,12] **Turbulence closure** (BLM chapt 6, except 6.6, 6.7, 6.9; MSE
+   Appendix H) 
+   closure problem, parameterizations, local & nonlocal closures
+
+#. [13,14] **Time series methods** (BLM chapt 8, except 8.11)
+   autocorrelation, structure function, Fourier spectrum, periodogram,
+   wavelets
+
+#. [15,16] **Similarity theory** (BLM chapt 9, except 9.8 & 9.10; BLM section
+   10.7)
+   Buckingham Pi methods, scaling variables, special cases, log wind
+   profile
+
+#. [17,18] **Convective mixed layer** (BLM chapt 11)
+   surface layer, mixed layer, entrainment zone, convective scaling,
+   models, large-eddy simulation
+
+#. [19,20] **Cloud-capped boundary layersn** (BLM chapt. 13,
+   ABL chapt. 7)
+
+#. [21,22] LES
+
+#. [23,24] Large scale parameterizaiton
+
+Evaluation
+__________
+
+* Homework: weekly to biweekly (60%)
+
+* Final Project: 
+  
+  - Writeup (35)
+
+  - Presentation/response to general questions (5%)
+

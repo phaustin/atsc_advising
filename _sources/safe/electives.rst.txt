@@ -1,0 +1,41 @@
+:orphan:
+   
+Elective choices
+++++++++++++++++
+
+The ATSC major includes 15 elective credits in second year and 24 elective credits in years 3 and 4.  Here are some things to consider as you choose courses to fulfill these requirements
+
+* Thermodynamics
+
+  - For all majors, we recommend a course in thermodynamics.  CHEM 205 (Physical Chemistry) is a good option.  If you are interested in graduate school in Atmospheric Science, you should take either CHEM 304 (Fundamentals of Thermodynamics and Statistical Physics) or  PHYS 203 (Thermal Physics I)
+
+* Focus on forecasting or graduate study in Atmospheric Science
+
+  - If you are interested in either a forecasting job with Environment Canada or graduate school, you should take math through partial differential equations, which means EOSC 250 (Fields and Fluxes), MATH 221 (Matrix Algebra), MATH 215 (Elementary Differential Equations I), and either MATH 316 (Elementary Differential Equations II) or PHYS 312 (Introduction tom Mathematical Physics)
+
+* Focus on statistics    
+
+  - If you are interested in applying statistics to atmospheric problems, statistics courses after STAT 200 require either MATH 302 or STAT 302 (Introduction to Probability).   STAT 306 (Finding Relationships in Data) and STAT 406 (Methods for Statistical Learning) are useful follow-on courses.
+
+* Focus on computing and atmospheric science
+
+  - Note that follow on courses in Computer Science have CPSC 110 as prerequisite
+
+* Focus on Field Skills and Geographic Information Science tools
+
+  -  ATSC 303, GEOB 309, 370, 373, EOSC 354, 473
+
+     (note that GEOB 309 requires either BIOL 230 or GEOB 207 as prereq and GEOB 206 or EOSC 330 as corequisites.  EOSC 473 requires EOSC 372)
+
+* Focus on Boundary Layer Applications
+
+  - Focus on Boundary Layer Applications:  CHEM 302, GEOB 400, 401, 402
+
+* Focus on Climate Science and Policy
+
+  -  EOSC 340, ENVR 410, ENVR 430, GEOG 312
+
+
+.. raw:: pdf
+
+         PageBreak     

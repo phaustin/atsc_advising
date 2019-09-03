@@ -1,0 +1,57 @@
+.. include:: refs.txt
+
+.. _chap5_coding:
+
+Chapter 5 coding problems
+_________________________
+
+
+1) Use your rootfinder to write a function that does the following:
+   Given the temperture and mixing ratio at height z=0
+   find the temperture as a function of height assuming
+   saturated adiabatic ascent.
+
+   For this exercise:
+
+   i)   Start at z0=0, p0 = :math:`10^5` Pa, T0=280 K
+   ii)  Calculate an initial :math:`h_{m0}=c_p T_0 + l_v r_{sat}(T_0, p_0 ) + g z_0`
+        using :math:`l_v = 2.5 \times 10^6\ J/kg/K` and :math:`c_p = 1004\ J/kg/K`
+        and g=9.8 :math:`m\,s^{-2}` (eqn 38 of the `thermodynamics notes`_  where I
+        unfortunately called the moist static energy  :math:`s_v` instead of :math:`h_m` )
+        Use the definition on p. 5 of the `thermodynamics notes`_ that 
+        :math:`r_{sat}(T, p ) = \rho_{sat}/\rho_{d} = \epsilon e_{sat}/(p - e_{sat} )`
+        where :math:`\epsilon = R_d / R_v = 287 (J/kg/K) / 461 (J/kg/K) = 0.622`
+   iii) Use the rootfinder to find a vector of temperatures that
+        satisfies  :math:`h_m = h_{m0}` for a hydrostatic
+        atmosphere where the pressure decreases according to :math:`dp = - \rho g dz`
+        given a vector of heights from z=0 to z=3000 m in 10 m increments, with
+        :math:`\rho = p/(R_d T)` and :math:`R_d` = 287 J/kg/K
+
+2) Use this function to calculate T,z,rv,and p for a saturated hydrostatic
+   atmosphere and show that :math:`\theta_e` is approximately
+   constant.
+
+3) Hand in:
+
+      Hand in a script that prints out the (approximately constant) vector of
+      :math:`\theta_e` values, where 
+      :math:`\theta_e = \theta \exp \left ( \frac{l_v r_{sat}}{c_p T} \right )`
+      (eqn 53 of the `thermodynamics notes`_ )
+
+
+4) Find :math:`R_f` (810 m), :math:`u_*`, :math:`w_*` (both at 30 m), :math:`\Phi_M` and
+   :math:`\Phi_H` (both at 810 m) for our LES data ( `Bomex data`_ ).  For the vertical gradients
+   in the mean U and V winds just do a simple vertical difference between 810 and 790 m.
+
+   Hand in a script that calculates and prints each of the values.  For your reference:
+
+   - :math:`R_f` : Stull 5.6.1a
+
+   - :math:`u_*` : Stull 2.10b
+
+   - :math:`w_*` : Stull 4.2a
+
+   - :math:`\Phi_H` and :math:`\Phi_M` : Stull 5.8a
+
+
+

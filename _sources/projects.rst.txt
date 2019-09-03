@@ -1,0 +1,43 @@
+.. _projects:
+
+
+Project proposals
+_________________
+
+.. include:: refs.txt
+
+
+Michael -- paper suggestions
+++++++++++++++++++++++++++++
+
+- `Flux parameterization over land surfaces for atmospheric models`_
+
+- `Integration of a numerical model and remotely sensed data to study urban/rural land surface climate processes`_
+
+- `Validation of the NOAH-OSU land surface model using surface flux measurements in Oklahoma`_
+
+Nadya -- sea-breeze simulation
+++++++++++++++++++++++++++++++
+
+- `Nadya's proposal`_
+
+Niamh -- wavelet analysis of aircraft data
+++++++++++++++++++++++++++++++++++++++++++
+
+- `Niamh's proposal`_
+
+- `RICO experiment`_
+
+- `VOCALS experiment`_
+
+- `Data directory <http://clouds.eos.ubc.ca/~phil/courses/atsc500/data>`_
+
+Paul -- Boundary layer evolution
+++++++++++++++++++++++++++++++++
+
+- `Stevens (2005)`_
+
+
+
+
+

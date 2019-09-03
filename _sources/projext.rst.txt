@@ -1,0 +1,13 @@
+Project proposals
+_________________
+
+
+Michael
++++++++
+
+- `Flux parameterization over land surfaces for atmospheric models`_
+
+- `Integration of a numerical model and remotely sensed data to study urban/rural land surface climate processes`_
+
+- `Validation of the NOAH-OSU land surface model using surface flux measurements in Oklahoma`_
+

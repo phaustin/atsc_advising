@@ -1,0 +1,17 @@
+Lecture notebooks (html version)
+++++++++++++++++++++++++++++++++
+
+(Download the originals from `Github <https://github.com/phaustin/atsc500/tree/master/notebooks>`_)
+
+* `Lecture 2 <html_files/lec2.html>`_
+
+* `Lecture 3 <html_files/lec3.html>`_
+
+* `Lecture 4 <html_files/lec4.html>`_    
+
+* `Lecture 4 solution <html_files/lec4_answer.html>`_    
+
+* `Lecture 5 scale heights <html_files/lec5_hydrostat.html>`_      
+
+* `Lecture 6 data analysis for the tropical run <html_files/lec6_latent.html>`_      
+  

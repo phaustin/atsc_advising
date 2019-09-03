@@ -1,0 +1,109 @@
+ATSC Advising
+=============
+
+    
+Advising notes for 2019
+_______________________
+
+
++ The undergraduate advisor for this year is Dr. Philip.  Contact
+  information:
+  
+  Office: EOS-South 157
+
+  E-mail: paustin@eos.ubc.ca
+  
+  Phone: 604-822-2175
+
+  Web: http://www.cafc.ubc.ca
+
+
++ If Phil is unavailable contact Dr. Roland Stull
+  
+  Office: EOS-South 158
+
+  E-mail: rstull@eos.ubc.ca
+  
+  Phone: 604-822-5901
+
+  Web: http://www.eos.ubc.ca/about/faculty/R.Stull.html
+
+  
++ If you are planning on applying for the Environment Canada forecaster job posting
+  in November, email paustin@eos.ubc.ca to be put on a mailing list for 
+  preparation information.
+
+
+Course planning information
+___________________________
+
+The ATSC major
+++++++++++++++
+
+
+* `The calendar entry <http://www.calendar.ubc.ca/vancouver/index.cfm?tree=12,215,410,416>`_ 
+
+* `Suggestions for electives <./electives.html>`_
+
+* `Ideas for independent research projects for ATSC 448 <./projects.html>`_
+
+Degree Navigator
+++++++++++++++++
+
+`Degree Navigator <http://science.ubc.ca/students/degree-navigator>`_
+important to check whether you are on track to satisfy degree requirements for
+graduation.  The website has a couple of short videos -- if you've got
+questions email me at paustin@eos.ubc.ca
+
+
+Planning templates -- coming soon
++++++++++++++++++++++++++++++++++
+
+For students finishing under the current degree requirements:
+
+We have prepared a course checklist in pdf and docx format for ATSC majors that can be used to make sure you are fulfilling
+your degree requirements.    Put in the courses you have taken and are planning to take and
+add up your credits to see whether your schedule meets UBC, Science, and ATSC requirements.  Because
+several required courses are offered only every other year, there are two different templates:
+
++ If you declared your major and took ATSC 201 in an even year (2016, 2018, etc.)  then download
+  use the :download:`even year pdf template <docs/ATSC_MAJOR_JUNE_2015_even2.pdf>`  or the
+  :download:`even year docx template <docs/ATSC_MAJOR_JUNE_2015_even2.docx>`
+
++ If you declared your major and took ATSC 201 in an odd year (2017, 2019, etc.)
+  then download use the :download:`odd year pdf template <docs/ATSC_MAJOR_JUNE_2015_odd2.pdf>`  or the
+  :download:`odd year docx template <docs/ATSC_MAJOR_JUNE_2015_odd2.docx>`
+
+Course tables
++++++++++++++
+
++ Here are sample schedules that show how the requirements can be fulfilled term
+  by term over four years:
+
+  + `Even year start (ATSC 201 in 2014, 2016, etc) <requirements/even2.html>`_
+  
+  + `Odd year start (ATSC 201 in 2013, 2015, etc) <requirements/odd2.html>`_  
+
+Mailing lists
++++++++++++++
+
+We maintain two mailing lists:
+
+1) atsc_announce for seminars, lunches with private sector employers etc.
+
+   To subscribe: email paustin@eoas.ubc.ca
+
+2) atsc_jobs:  Job announcements in atmospheric science at all levels
+
+   To subscribe: email rstull@eoas.ubc.ca
+    
+Useful web pages
+++++++++++++++++
+
+- `Batchelor of Science requirements <http://www.calendar.ubc.ca/vancouver/index.cfm?tree=12,215,410,0>`_
+
+- `Atmospheric Science Program official calendar entry <http://www.calendar.ubc.ca/vancouver/index.cfm?tree=12,215,410,416>`_
+
+- `Promotion requirements <http://www.calendar.ubc.ca/vancouver/index.cfm?tree=12,215,410,1467>`_
+
+
